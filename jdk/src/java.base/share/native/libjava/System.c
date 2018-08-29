@@ -110,7 +110,11 @@ Java_java_lang_System_identityHashCode(JNIEnv *env, jobject this, jobject x)
 
 #ifndef VENDOR /* Third party may overwrite this. */
 #define VENDOR "Oracle Corporation"
+#endif
+#ifndef VENDOR_URL
 #define VENDOR_URL "http://java.oracle.com/"
+#endif
+#ifndef VENDOR_URL_BUG
 #define VENDOR_URL_BUG "http://bugreport.java.com/bugreport/"
 #endif
 

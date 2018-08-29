@@ -65,7 +65,11 @@
 #endif // INCLUDE_ALL_GCS
 
 // Note: This is a special bug reporting site for the JVM
+#ifdef VENDOR_URL_VM_BUG
+#define DEFAULT_VENDOR_URL_BUG VENDOR_URL_VM_BUG
+#else
 #define DEFAULT_VENDOR_URL_BUG "http://bugreport.java.com/bugreport/crash.jsp"
+#endif
 #define DEFAULT_JAVA_LAUNCHER  "generic"
 
 char*  Arguments::_jvm_flags_file               = NULL;
