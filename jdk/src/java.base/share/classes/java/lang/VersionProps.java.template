@@ -57,6 +57,8 @@ class VersionProps {
     private static final String VERSION_OPT =
         "@@VERSION_OPT@@";
 
+    private static final String VENDOR =
+        "@@COMPANY_NAME@@";
     static {
         init();
     }
@@ -177,7 +179,7 @@ class VersionProps {
             jdk_debug_level = jdk_debug_level + " ";
         }
 
-        ps.print(java_runtime_name + " (" + jdk_debug_level + "build " + java_runtime_version);
+        ps.print(java_runtime_name + " (" + VENDOR + " " + jdk_debug_level + "build " + java_runtime_version);
 
         ps.println(')');
 
@@ -185,7 +187,7 @@ class VersionProps {
         String java_vm_name    = System.getProperty("java.vm.name");
         String java_vm_version = System.getProperty("java.vm.version");
         String java_vm_info    = System.getProperty("java.vm.info");
-        ps.println(java_vm_name + " (" + jdk_debug_level + "build " + java_vm_version + ", " +
+        ps.println(java_vm_name + " (" + VENDOR + " " + jdk_debug_level + "build " + java_vm_version + ", " +
                    java_vm_info + ")");
     }
 
